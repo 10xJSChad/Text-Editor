@@ -26,22 +26,18 @@ void render() {
 void loadFile() {
     string line;
     ifstream file("file.txt");
-    if (file.is_open())
-    {
-        while (getline(file, line))
-        {
+    if (file.is_open()) {
+        while (getline(file, line)) {
             lines.push_back(line);
         }
         file.close();
     }
-
     else cout << "Unable to open file";
 }
 
 void mainLoop() {
     int c = 0;
-    while (1)
-    {
+    while (1) {
         c = 0;
         switch ((c = _getch())) {
         case KEY_UP:
